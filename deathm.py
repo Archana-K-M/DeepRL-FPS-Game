@@ -18,11 +18,11 @@ class VizDoomDeathmatchEnv(gym.Env):
         self.game.init()
 
         self.actions = [
-            [1, 0, 0],  # move forward
-            [0, 1, 0],  # turn left
-            [0, 2, 0],  # turn right
-            [0, 0, 1],  # shoot
-            [0, 0, 0]   # do nothing
+            [1, 0, 0],
+            [0, 1, 0],
+            [0, 2, 0],
+            [0, 0, 1],
+            [0, 0, 0] 
         ]
         self.action_space = spaces.Discrete(len(self.actions))
         self.observation_space = spaces.Box(low=0, high=255,
